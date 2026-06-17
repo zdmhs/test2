@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURELIA 轻奢饰品 - 首页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- 顶部通知 -->
+<div class="top-bar">✨ 全场满299包邮 &nbsp;|&nbsp; <span>新会员首单享9折</span></div>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <a href="index.html" class="logo">AURELIA<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">首页</a>
+      <a href="products.html">全部商品</a>
+      <a href="about.html">关于我们</a>
+    </div>
+    <div class="nav-icons">
+      <a href="products.html">🔍</a>
+      <a href="#" id="cartBtn">🛒<span class="cart-badge" id="cartBadge" style="display:none">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg" style="background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 50%, #5a4a3a 100%);"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="subtitle">AURELIA COLLECTION</p>
+    <h1>轻奢 · 优雅 · 永恒</h1>
+    <p>每一件饰品，都是对精致生活的告白。<br>精选材质，匠心设计，让每一天都闪耀独特光芒。</p>
+    <a href="products.html" class="btn">探索臻品</a>
+  </div>
+</section>
+
+<!-- 热销产品 -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>热销臻品</h2>
+      <div class="divider"></div>
+      <p class="sub">BEST SELLERS</p>
+    </div>
+    <div class="product-grid"></div>
+  </div>
+</section>
+
+<!-- 品牌故事 -->
+<section class="section" style="background: var(--bg-warm);">
+  <div class="container">
+    <div class="brand-story">
+      <div class="image">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#c9a96e,#8a7a5a);display:flex;align-items:center;justify-content:center;color:#fff;font-family:serif;font-size:28px;letter-spacing:4px;">AURELIA</div>
+      </div>
+      <div class="text">
+        <h3>我们的故事</h3>
+        <span class="en">OUR STORY</span>
+        <p>AURELIA 创立于对美的执着追求。我们相信，真正的轻奢不在于价格标签，而在于设计中的温度与细节里的诚意。</p>
+        <p>每一件饰品都经过设计师精心打磨，从选材到工艺，力求在简约与精致之间找到完美平衡。让每一位佩戴者，都能在平凡的日子里，感受到不凡的质感。</p>
+        <a href="about.html" class="btn">了解更多</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 分隔 Banner -->
+<section class="banner-divider">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,#2a2a2a,#4a3a2a);"></div>
+  <div class="content">
+    <h2>简约 · 不简单</h2>
+    <p>ELEGANCE IS THE ONLY BEAUTY THAT NEVER FADES</p>
+  </div>
+</section>
+
+<!-- 特色服务 -->
+<section class="section">
+  <div class="container">
+    <div class="features">
+      <div class="item">
+        <div class="icon">🚚</div>
+        <h4>全国包邮</h4>
+        <p>满299元享免费配送</p>
+      </div>
+      <div class="item">
+        <div class="icon">🔒</div>
+        <h4>品质保障</h4>
+        <p>30天无理由退换</p>
+      </div>
+      <div class="item">
+        <div class="icon">💎</div>
+        <h4>正品承诺</h4>
+        <p>每一件都经过严格质检</p>
+      </div>
+      <div class="item">
+        <div class="icon">💬</div>
+        <h4>专属客服</h4>
+        <p>7×24小时贴心服务</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 购物车侧栏 -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="header">
+    <h3>购物车 <span class="cart-count" id="cartCount">0</span></h3>
+    <button class="close-btn" id="cartClose">✕</button>
+  </div>
+  <div class="items" id="cartItems">
+    <div class="cart-empty">购物车是空的</div>
+  </div>
+  <div class="footer">
+    <div class="total">合计：<span id="cartTotal">¥0</span></div>
+    <button class="btn btn-gold" onclick="showToast('结算功能开发中')">去结算</button>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- 返回顶部 -->
+<button class="back-to-top" id="backToTop">↑</button>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>AURELIA<span>.</span></h3>
+      <p>专注轻奢饰品设计，用匠心诠释优雅。我们相信，每一件饰品都承载着独特的故事与情感。</p>
+    </div>
+    <div class="footer-col">
+      <h4>快速链接</h4>
+      <a href="index.html">首页</a>
+      <a href="products.html">全部商品</a>
+      <a href="about.html">关于我们</a>
+    </div>
+    <div class="footer-col">
+      <h4>商品分类</h4>
+      <a href="products.html?cat=项链">项链</a>
+      <a href="products.html?cat=耳饰">耳饰</a>
+      <a href="products.html?cat=手链">手链</a>
+      <a href="products.html?cat=戒指">戒指</a>
+    </div>
+    <div class="footer-col">
+      <h4>联系我们</h4>
+      <a>service@aurelia.com</a>
+      <a>微信公众号：AURELIA</a>
+      <a>小红书：@AURELIA</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 AURELIA. All Rights Reserved. &nbsp;|&nbsp; Web前端开发技术 期末作品
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
